@@ -37,7 +37,7 @@ Functions
 sampleData
 ----------
 
-The sample data is taken from a pilot recognition experiment using the remember/know procedure. In this experiment, this suject was asked to rate the recognition confidence from 1 (sure new) to 5 (sure old) or recollected (= 6). The data frame is ***sampleData*** contains the variables ***confidenceRatings***, which contains confidence ratings, and ***oldNew***, which contais information whether a stimuli had been studied (i.e. old, = 1) or had not been studied (i.e. new, = 0). Add equations
+The sample data is taken from a pilot recognition experiment using the remember/know procedure. In this experiment, this suject was asked to rate the recognition confidence from 1 (sure new) to 5 (sure old) or recollected (= 6). The data frame is ***sampleData*** contains the variables ***confidenceRatings***, which contains confidence ratings, and ***oldNew***, which contains information whether a stimuli had been studied (i.e. old, = 1) or had not been studied (i.e. new, = 0). Add equations
 
 cumRates
 --------
