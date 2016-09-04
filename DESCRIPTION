@@ -1,0 +1,8 @@
+Package: memoryROC
+Title: A package to analyse recognition memory data within R.
+Version: 0.0.1.0
+Authors@R: person("Joern Alexander", "Quent", email = "first.last@example.com", role = c("aut", "cre"))
+Description: This package was written to analyse recognition memory performance and estimate the Dual Process Signal Detection parameters within R.
+Depends: R (>= 3.2.4)
+License: GPL-2
+LazyData: true
