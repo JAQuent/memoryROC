@@ -1,6 +1,13 @@
 #' Estimation of recollection and familiarity using the ROC Remember/Know procedure
 #'
-#' This function allows to estimate recollection and familiarity using ROC Remember/Know procedure.
+#' This function allows to estimate recollection and familiarity using Remember/Know procedure. 
+#' In this procedure, recollection is given by the probability that an old/studied item were 
+#' given a remember response, while familiarity is given by the probility that an old/studied 
+#' item were given a know response divived by the probility that an old/studied item were not 
+#' given a remember response. 
+#' \deqn{recollection = P(remember)} 
+#' \deqn{familiarity = P(know)/(1 -P(remember))}
+#' 
 #' @author Joern Alexander Quent, \email{alexander.quent@rub.de}
 #' @param rememberLevels A value indicating the code for the remember response.
 #' @param knowLevels A vector contatining the codes for the know responses.
@@ -21,7 +28,6 @@
 rememberKnow <- function(rememberLevels, knowLevels, confidenceRatings, oldNew, oldNewLevels = c(0,1)){
   results     <- c()
   
-  newStimuli <- confidenceRatings[which(oldNew == oldNewLevels[1])]
   oldStimuli <- confidenceRatings[which(oldNew == oldNewLevels[2])]
   
   results$recollection <- sum(oldStimuli == rememberLevels)/length(oldStimuli)

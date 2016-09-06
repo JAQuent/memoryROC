@@ -5,7 +5,7 @@
 #' @param responseScale An vector containing  possible levels of recognition responses ordered from highest to lowest (e.g. 6:1).
 #' @param confidenceRatings An vector containing recognition responses according to levels of the variable responseScale.
 #' @param oldNew An vector coding whether an item was new/not-studied or old/studied. 
-#' @param old_newLevel An vector containing  possible levels of old_newInformation. The first value or level is for new/not-studied 
+#' @param old_newLevel An vector containing  possible levels of oldNew. The first value or level is for new/not-studied 
 #' items and the second value is for old/studied items. Defaults to c(0,1).
 #' @return The function returns a list with components:
 #' \item{falseAlarm}{The extracted false alarm rate.}
