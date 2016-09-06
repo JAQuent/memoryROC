@@ -13,7 +13,7 @@ cumRates(responseScale, confidenceRatings, oldNew, old_newLevel = c(0, 1))
 
 \item{oldNew}{An vector coding whether an item was new/not-studied or old/studied.}
 
-\item{old_newLevel}{An vector containing  possible levels of old_newInformation. The first value or level is for new/not-studied 
+\item{old_newLevel}{An vector containing  possible levels of oldNew. The first value or level is for new/not-studied 
 items and the second value is for old/studied items. Defaults to c(0,1).}
 }
 \value{

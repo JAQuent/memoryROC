@@ -25,7 +25,13 @@ The function returns a list with components:
 \item{familiarity}{The estimation of familiarity.}
 }
 \description{
-This function allows to estimate recollection and familiarity using ROC Remember/Know procedure.
+This function allows to estimate recollection and familiarity using Remember/Know procedure. 
+In this procedure, recollection is given by the probability that an old/studied item were 
+given a remember response, while familiarity is given by the probility that an old/studied 
+item were given a know response divived by the probility that an old/studied item were not 
+given a remember response. 
+\deqn{recollection = P(remember)} 
+\deqn{familiarity = P(know)/(1 -P(remember))}
 }
 \details{
 The value of \code{\link{recollection}} is represented by the probability of a remember response for old items. The value of 

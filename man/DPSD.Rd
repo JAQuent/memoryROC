@@ -4,7 +4,8 @@
 \alias{DPSD}
 \title{Estimation of recollection and familiarity by fitting to Dual Process Signal Detection (DPSD) model}
 \usage{
-DPSD(responseScale, confidenceRatings, oldNew, oldNewLevels = c(0, 1))
+DPSD(responseScale, confidenceRatings, oldNew, oldNewLevels = c(0, 1),
+  iterations = 200)
 }
 \arguments{
 \item{responseScale}{An vector containing  possible levels of recognition responses ordered from highest to lowest (e.g. 6:1).}
@@ -13,8 +14,9 @@ DPSD(responseScale, confidenceRatings, oldNew, oldNewLevels = c(0, 1))
 
 \item{oldNew}{An vector coding whether an item was new/not-studied or old/studied.}
 
-\item{oldNewLevels}{An vector containing  possible levels of old_newInformation. The first value or level is for new/not-studied 
-items and the second value is for old/studied items. Defaults to c(0,1).}
+\item{oldNewLevels}{An vector containing  possible levels of old_newInformation. The first value or level is for new/not-studied}
+
+\item{iterations}{A numeric value specifying the number of iterations. Default is set to 200.}
 }
 \value{
 The function the set of parameters, which showed the lowest total squared difference:
@@ -23,8 +25,11 @@ The function the set of parameters, which showed the lowest total squared differ
 }
 \description{
 This function allows to estimate recollection and familiarity by fitting data to the DPSD model. 
-The optimization is attempted by minimizing the total squared difference between observed and predicted hit and false 
-alarm rates. The Broyden-Fletcher-Goldfarb-Shanno (BFGS) algorithm from the function.
+The optimization is attempted by minimizing the total squared difference between observed and 
+predicted hit and false alarm rates. The Broyden-Fletcher-Goldfarb-Shanno (BFGS) algorithm from the function. 
+The function first uses standard start values and then random values in order to find the set of parameters, 
+which fit the data best by returning the values with the lowest total squared difference.
+The function \code{\link{optim}} is used for optimization. Box constraints limit estimations of recollection and familiarity to be positive.
 }
 \author{
 Joern Alexander Quent, \email{alexander.quent@rub.de}

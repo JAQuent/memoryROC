@@ -12,9 +12,9 @@ fitDPSD(falseAlarm, hit, iterations = 200, startValues = c(0.2, 0.5,
 
 \item{hit}{A vector containing the hit rate.}
 
-\item{iterations}{A numeric value specifying the number of iterations. Default is set to 200, which can take a little bit of time.}
+\item{iterations}{A numeric value specifying the number of iterations. Default is set to 200.}
 
-\item{startValues}{bla}
+\item{startValues}{A vector containing start values for the fitting procress. The first position of the vector must hold a value for recollection, the second a value for familiarity and the criterion values have to follow. The number of necessary criterion values is equal to the number of confidence levels - 1. The default uses values between 0.5 and -1.5.}
 }
 \value{
 The function returns a list with components:
@@ -22,10 +22,13 @@ The function returns a list with components:
 \item{familiarity}{The median of the estimations of familiarity.}
 }
 \description{
-This function allows to estimate recollection and familiarity by fitting it to DPSD model. 
-The optimization is attempted by minimizing the total squared difference between observed and predicted hit and false 
-alarm rates. The Broyden-Fletcher-Goldfarb-Shanno (BFGS) algorithm from the function. 
-\code{\link{optim}} is used for optimization. Box constraints limit estimations of recollection and familirity to be positive.
+This function allows to estimate recollection and familiarity by fitting data to the DPSD model. 
+The optimization is attempted by minimizing the total squared difference between observed and 
+predicted hit and false alarm rates. The Broyden-Fletcher-Goldfarb-Shanno (BFGS) algorithm from the function. 
+The function first uses standard start values and then random values in order to find the set of parameters, 
+which fit the data best by returning the values with the lowest total squared difference.
+The function \code{\link{optim}} is used for optimization. Box constraints limit estimations of recollection and familiarity to be positive.
+A high number of iterations is necessary to get stable estimates.
 }
 \author{
 Joern Alexander Quent, \email{alexander.quent@rub.de}
@@ -34,7 +37,7 @@ Joern Alexander Quent, \email{alexander.quent@rub.de}
 Yonelinas, A. P. (1994). Receiver-operating characteristics in recognition memory: evidence for a dual-process model. Journal of Experimental Psychology: Learning, Memory, and Cognition, 20(6), 1341.
 }
 \seealso{
-A matlab implementation by Dorian Pustina served as an example for this function. 
+A MATLAB implementation by Dorian Pustina served as an example for this function. 
 See \code{\link{github.com/dorianps/memorysolve}}.
 }
 \keyword{ROC}

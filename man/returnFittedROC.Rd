@@ -17,8 +17,9 @@ The function returns a list with components:
 \item{hit}{The fitted hit rate.}
 }
 \description{
-This function allows you to get the correspending false alarm and hit rates for a given set of
-recollection and familiarity assuming that the variance of the old item distirbution is 1.
+This function allows you to get the correspending false alarm and hit rates for a given set of recollection 
+and familiarity assuming that the variance of the old item distirbution is 1. This is helpful to compare  
+raw hit and false alarm rates with fitted ones.
 }
 \author{
 Joern Alexander Quent, \email{alexander.quent@rub.de}
