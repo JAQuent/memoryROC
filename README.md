@@ -84,10 +84,10 @@ fitDPSD(rates$falseAlarm, rates$hit)
 ```
 
     ## $recollection
-    ## [1] 0.4895405
+    ## [1] 0.4895474
     ## 
     ## $familiarity
-    ## [1] 0.9709638
+    ## [1] 0.9709509
 
 DPSD
 ----
@@ -102,15 +102,15 @@ DPSD(responseScale, sampleData$confidenceRatings, sampleData$oldNew)
 ```
 
     ## $recollection
-    ## [1] 0.4895456
+    ## [1] 0.4895553
     ## 
     ## $familiarity
-    ## [1] 0.9709508
+    ## [1] 0.9709366
 
 rememberKnow
 ------------
 
-This function allows to estimate recollection and familiarity using Remember/Know procedure. In this procedure, recollection is given by the probability that an old/studied item were given a remember response, while familiarity is given by the probility that an old/studied item were given a know response divived by the probility that an old/studied item were not given a remember response. \[ recollection = P(remember) \] \[ familiarity = P(know)/(1 -P(remember)) \]
+This function allows to estimate recollection and familiarity using Remember/Know procedure. In this procedure, recollection is given by the probability that an old/studied item were given a remember response, while familiarity is given by the probility that an old/studied item were given a know response divived by the probability that an old/studied item were not given a remember response. \[ recollection = P(remember) \] \[ familiarity = P(know)/(1 -P(remember)) \]
 
 ### Example usage:
 
@@ -181,7 +181,7 @@ License
 
 memoryROC A package to analyse recognition memory data within R.
 
-Copyright (C) 2016 Jörn Alexander Quent
+Copyright (C) 2016 JÃ¶rn Alexander Quent
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
