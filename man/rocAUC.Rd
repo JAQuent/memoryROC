@@ -16,7 +16,7 @@ The function returns the estimation of AUC.
 }
 \description{
 This function calculates the AUC by summing the tri- and rectangles, which can be made of the ROC points. 
-If missing, the y-intercept is added by linear interpolation. The last point, where both false Alarm rates reach 1, is also added.
+If missing, the y-intercept is added by linear interpolation. The last point, where both rates reach 1, is also added.
 }
 \author{
 Joern Alexander Quent, \email{alexander.quent@rub.de}
