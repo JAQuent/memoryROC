@@ -57,13 +57,31 @@ fitDPSD <- function(falseAlarm, hit, iterations = 200, startValues = c(0.2, 0.5,
       x0  <- c(runif(1, min = 0, max = 1), runif(1, min = 0, max = 3), runif(length(falseAlarm), min = -5, max = 5))
     }
 
-    temp <- try(optim(x0, solver, lower = c(0, 0, -Inf, -Inf, -Inf, -Inf, -Inf), method = "L-BFGS-B", control = control))
-    familiarityEstimates[i]  <- temp$par[1]
-    recollectionEstimates[i] <- temp$par[2]
-    value[i]                 <- temp$value
+    temp <- try(optim(x0, solver, lower = c(0, 0, -Inf, -Inf, -Inf, -Inf, -Inf), method = "L-BFGS-B", control = control), silent = TRUE)
+    if (class(temp) == "try-error"){
+      familiarityEstimates[i]  <- NA
+      recollectionEstimates[i] <- NA
+      value[i]                 <- NA
+    } else {
+      familiarityEstimates[i]  <- temp$par[1]
+      recollectionEstimates[i] <- temp$par[2]
+      value[i]                 <- temp$value 
+    }
     
  }
-  results$recollection <- recollectionEstimates[which(value == min(value))][1]
-  results$familiarity  <- familiarityEstimates[which(value == min(value))][1]
+  results$recollection <- recollectionEstimates[which(value == min(value, na.rm = TRUE))][1]
+  results$familiarity  <- familiarityEstimates[which(value == min(value, na.rm = TRUE))][1]
+  
+  # Display results
+  cat(paste('\nNumber of iterations:', as.character(iterations)))
+  cat(paste('\nNumber of failed runs:', as.character(length(which(is.na(value))))))
+  cat(paste('\nMinimum:', as.character(round(value[which(value == min(value, na.rm = TRUE))], 4))))
+  cat(paste('\nMaximum:', as.character(round(value[which(value == max(value, na.rm = TRUE))], 4))))
+  cat(paste('\nSD:', as.character(round(sd(value, na.rm = TRUE), 4))))
+  cat(paste('\nMean:', as.character(round(mean(value, na.rm = TRUE), 4))))
+  cat(paste('\nMedian:', as.character(round(median(value, na.rm = TRUE), 4))))
+  cat('\n')
+
+  
   return(results)
 }
