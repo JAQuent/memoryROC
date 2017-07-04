@@ -4,7 +4,8 @@
 \alias{dPrime}
 \title{Calculating d-prime (d')}
 \usage{
-dPrime(oldRating, ratings, oldNew, oldNewLevels = c(0, 1))
+dPrime(oldRating, ratings, oldNew, oldNewLevels = c(0, 1),
+  transformation = TRUE)
 }
 \arguments{
 \item{oldRating}{A value indicating the code for the remember response.}
@@ -15,13 +16,15 @@ dPrime(oldRating, ratings, oldNew, oldNewLevels = c(0, 1))
 
 \item{oldNewLevels}{An vector containing  possible levels of old_newInformation. The first value or level is for new/not-studied 
 items and the second value is for old/studied items. Defaults to c(0,1).}
+
+\item{transformation}{Logical indicating to choose a log-linear tranformation following Snodgrass & Corwin (1988). Default is TRUE.}
 }
 \value{
 The function returns a value for d'.
 }
 \description{
 This function caculates the dimensionless statistic d-prime (d').
-To do this, the percentage values are converted to z-values with the help of inverse cumulative distribution function (CDF)
+To do this, the (log-linear tranformed) percentage values are converted to z-values with the help of inverse cumulative distribution function (CDF)
 of the Gaussian distribution with a mean of 0 and a standard deviation of 1. 
 Or as a equation:
 \deqn{d' = z(hit rate) - z(false alarm rate)}
@@ -29,6 +32,9 @@ where \eqn{z(p), p in [0,1]} is the inverse Gaussian CDF.
 }
 \author{
 Joern Alexander Quent, \email{alexander.quent@rub.de}
+}
+\references{
+Snodgrass, J. G., & Corwin, J. (1988). Pragmatics of measuring recognition memory: Applications to dementia and amnesia. Journal of Experimental Psychology: General, 117(1), 34–50. https://doi.org/10.1037/0096-3445.117.1.34
 }
 \keyword{ROC}
 \keyword{d'}
