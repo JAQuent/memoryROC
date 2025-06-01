@@ -2,15 +2,15 @@
 #'
 #' This function allows to estimate recollection and familiarity using Remember/Know procedure. 
 #' In this procedure, recollection is given by the probability that an old/studied item were 
-#' given a remember response, while familiarity is given by the probility that an old/studied 
-#' item were given a know response divived by the probility that an old/studied item were not 
+#' given a remember response, while familiarity is given by the probability that an old/studied 
+#' item were given a know response divided by the probability that an old/studied item were not 
 #' given a remember response. 
 #' \deqn{recollection = P(remember)} 
 #' \deqn{familiarity = P(know)/(1 -P(remember))}
 #' 
 #' @author Joern Alexander Quent, \email{alexander.quent@rub.de}
 #' @param rememberLevels A value indicating the code for the remember response.
-#' @param knowLevels A vector contatining the codes for the know responses.
+#' @param knowLevels A vector containing the codes for the know responses.
 #' @param oldNew An vector coding whether an item was new/not-studied or old/studied.
 #' @param confidenceRatings An vector containing recognition responses coding remember and know responses.
 #' @param oldNewLevels An vector containing  possible levels of old_newInformation. The first value or level is for new/not-studied 

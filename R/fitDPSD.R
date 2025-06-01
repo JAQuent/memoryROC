@@ -12,7 +12,7 @@
 #' @param falseAlarm A vector containing the false alarm rate.
 #' @param hit A vector containing the hit rate.
 #' @param iterations A numeric value specifying the number of iterations. Default is set to 200.
-#' @param startValues A vector containing start values for the fitting procress. The first position of the vector must hold a value for recollection, the second a value for familiarity and the criterion values have to follow. The number of necessary criterion values is equal to the number of confidence levels - 1. The default uses values between 0.5 and -1.5. 
+#' @param startValues A vector containing start values for the fitting process. The first position of the vector must hold a value for recollection, the second a value for familiarity and the criterion values have to follow. The number of necessary criterion values is equal to the number of confidence levels - 1. The default uses values between 0.5 and -1.5. 
 #' @return The function returns a list with components:
 #' \item{recollection}{The median of the estimations recollection.}  
 #' \item{familiarity}{The median of the estimations of familiarity.}

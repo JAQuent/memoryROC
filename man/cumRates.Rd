@@ -31,4 +31,3 @@ Joern Alexander Quent, \email{alexander.quent@rub.de}
 \keyword{alarm}
 \keyword{false}
 \keyword{hit}
-

@@ -2,7 +2,7 @@
 % Please edit documentation in R/rocAUC.R
 \name{rocAUC}
 \alias{rocAUC}
-\title{Caculation of Area Under the Curve (AUC) for an ROC plot}
+\title{Calculation of Area Under the Curve (AUC) for an ROC plot}
 \usage{
 rocAUC(falseAlarm, hit)
 }
@@ -27,4 +27,3 @@ Joern Alexander Quent, \email{alexander.quent@rub.de}
 \keyword{ROC}
 \keyword{Under}
 \keyword{memory}
-

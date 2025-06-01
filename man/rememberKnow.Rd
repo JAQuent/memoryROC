@@ -4,13 +4,18 @@
 \alias{rememberKnow}
 \title{Estimation of recollection and familiarity using the ROC Remember/Know procedure}
 \usage{
-rememberKnow(rememberLevels, knowLevels, confidenceRatings, oldNew,
-  oldNewLevels = c(0, 1))
+rememberKnow(
+  rememberLevels,
+  knowLevels,
+  confidenceRatings,
+  oldNew,
+  oldNewLevels = c(0, 1)
+)
 }
 \arguments{
 \item{rememberLevels}{A value indicating the code for the remember response.}
 
-\item{knowLevels}{A vector contatining the codes for the know responses.}
+\item{knowLevels}{A vector containing the codes for the know responses.}
 
 \item{confidenceRatings}{An vector containing recognition responses coding remember and know responses.}
 
@@ -27,8 +32,8 @@ The function returns a list with components:
 \description{
 This function allows to estimate recollection and familiarity using Remember/Know procedure. 
 In this procedure, recollection is given by the probability that an old/studied item were 
-given a remember response, while familiarity is given by the probility that an old/studied 
-item were given a know response divived by the probility that an old/studied item were not 
+given a remember response, while familiarity is given by the probability that an old/studied 
+item were given a know response divided by the probability that an old/studied item were not 
 given a remember response. 
 \deqn{recollection = P(remember)} 
 \deqn{familiarity = P(know)/(1 -P(remember))}
@@ -37,15 +42,14 @@ given a remember response.
 The value of \code{\link{recollection}} is represented by the probability of a remember response for old items. The value of 
 \code{\link{familiarity}} is represented by the probability for a know response for old items divided by 1  - \code{\link{recollection}}.
 }
-\author{
-Joern Alexander Quent, \email{alexander.quent@rub.de}
-}
 \references{
 Yonelinas, A. P. (2001). Consciousness, Control, and Confidence: The 3 Cs of Recognition Memory. Journal of Experimental Psychology. General, 130(3), 361.
+}
+\author{
+Joern Alexander Quent, \email{alexander.quent@rub.de}
 }
 \keyword{ROC}
 \keyword{Remember/Know}
 \keyword{familiarity}
 \keyword{memory}
 \keyword{recollection}
-

@@ -4,8 +4,13 @@
 \alias{DPSD}
 \title{Estimation of recollection and familiarity by fitting to Dual Process Signal Detection (DPSD) model}
 \usage{
-DPSD(responseScale, confidenceRatings, oldNew, oldNewLevels = c(0, 1),
-  iterations = 200)
+DPSD(
+  responseScale,
+  confidenceRatings,
+  oldNew,
+  oldNewLevels = c(0, 1),
+  iterations = 200
+)
 }
 \arguments{
 \item{responseScale}{An vector containing  possible levels of recognition responses ordered from highest to lowest (e.g. 6:1).}
@@ -31,14 +36,13 @@ The function first uses standard start values and then random values in order to
 which fit the data best by returning the values with the lowest total squared difference.
 The function \code{\link{optim}} is used for optimization. Box constraints limit estimations of recollection and familiarity to be positive.
 }
-\author{
-Joern Alexander Quent, \email{alexander.quent@rub.de}
-}
 \references{
 Yonelinas, A. P. (1994). Receiver-operating characteristics in recognition memory: evidence for a dual-process model. Journal of Experimental Psychology: Learning, Memory, and Cognition, 20(6), 1341.
+}
+\author{
+Joern Alexander Quent, \email{alexander.quent@rub.de}
 }
 \keyword{DPSD}
 \keyword{ROC}
 \keyword{familiarity}
 \keyword{recollection}
-

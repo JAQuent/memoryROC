@@ -1,4 +1,4 @@
-#' Caculation of Area Under the Curve (AUC) for an ROC plot
+#' Calculation of Area Under the Curve (AUC) for an ROC plot
 #'
 #' This function calculates the AUC by summing the tri- and rectangles, which can be made of the ROC points. 
 #' If missing, the y-intercept is added by linear interpolation. The last point, where both rates reach 1, is also added. 
