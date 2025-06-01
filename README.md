@@ -220,7 +220,7 @@ dPrime(c(6,5,4), sampleData$confidenceRatings, sampleData$oldNew)
 
 ## responseBias
 
-This function calculates calculates the response bias (c):
+This function calculates the response bias (c):
 
 $$c = -0.5 * (z(hit\ rate) + z(false\ alarm\ rate))$$ where
 $z(p), p \in [0,1]$ is the inverse Gaussian CDF.
