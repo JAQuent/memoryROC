@@ -158,9 +158,9 @@ while familiarity is given by the probability that an old/studied item
 were given a know response divided by the probability that an
 old/studied item were not given a remember response.
 
-$$ recollection = P(remember) $$
+$$recollection = P(remember)$$
 
-$$ familiarity = P(know)/(1 -P(remember)) $$
+$$familiarity = P(know)/(1 -P(remember))$$
 
 ### Example usage
 
@@ -207,7 +207,7 @@ inverse cumulative distribution function (CDF) of the Gaussian
 distribution with a mean of 0 and a standard deviation of 1. Or as a
 equation:
 
-$$ d' = z(hit\ rate) - z(false\ alarm\ rate)$$ where $z(p), p \in [0,1]$
+$$d' = z(hit\ rate) - z(false\ alarm\ rate)$$ where $z(p), p \in [0,1]$
 is the inverse Gaussian CDF.
 
 ### Example usage
@@ -222,7 +222,7 @@ dPrime(c(6,5,4), sampleData$confidenceRatings, sampleData$oldNew)
 
 This function calculates calculates the response bias (c):
 
-$$ c = -0.5 * (z(hit\ rate) + z(false\ alarm\ rate))$$ where
+$$c = -0.5 * (z(hit\ rate) + z(false\ alarm\ rate))$$ where
 $z(p), p \in [0,1]$ is the inverse Gaussian CDF.
 
 ### Example usage
